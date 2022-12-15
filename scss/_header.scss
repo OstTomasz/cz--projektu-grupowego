@@ -49,8 +49,10 @@ ul {
     padding-bottom: 28px;
   }
   @media screen and (min-width: 1280px) {
+    background-image: url("../assets/icecream-max.png");
     background-position: right 267px bottom;
     max-width: 1280px;
+    padding-bottom: 45px;
   }
 
   &__navbar {
@@ -63,13 +65,24 @@ ul {
     margin-bottom: 92px;
     @media screen and (min-width: 768px) {
       height: 90px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 74px;
     }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 1280px) {
+      padding-left: 57px;
+    }
+    &--top {
+      @media screen and (min-width: 1280px) {
+        padding-left: 38px;
+      }
+    }
   }
   &__title {
     color: green;
@@ -91,11 +104,20 @@ ul {
       align-items: flex-end;
       margin-top: 19px;
     }
+    @media screen and (min-width: 1280px) {
+      margin-top: 58px;
+    }
     &--pic {
       display: inline-block;
       width: 124px;
       height: 126px;
       background-image: url("../assets/milk.png");
+      background-repeat: no-repeat;
+      @media screen and (min-width: 1280px) {
+        width: 188px;
+        height: 191px;
+        background-size: cover;
+      }
     }
     &--txt {
       display: inline-block;
@@ -105,6 +127,13 @@ ul {
       line-height: 12px;
       letter-spacing: 0em;
       max-width: 114px;
+      @media screen and (min-width: 1280px) {
+        max-width: 200px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+      }
     }
     & .arrow-button {
       display: block;
@@ -117,7 +146,10 @@ ul {
     @media screen and (min-width: 768px) {
       display: block;
       position: absolute;
-      right: 0;
+      right: 14px;
+      @media screen and (min-width: 1280px) {
+        right: 77px;
+      }
     }
     &--type {
       position: relative;
@@ -154,13 +186,23 @@ ul {
       width: 168px;
       height: 133px;
       background-image: url("../assets/lady.png");
+      @media screen and (min-width: 1280px) {
+        background-image: url("../assets/lady-max.png");
+        width: 293px;
+        height: 232px;
+        right: 109px;
+      }
     }
   }
 }
 .buttons {
   gap: 8px;
   margin-top: 20px;
+  @media screen and (min-width: 1280px) {
+    margin-top: 25px;
+  }
 }
+
 .button {
   padding: 8px 14px;
   border: 0;
@@ -189,4 +231,8 @@ ul {
   border-radius: 50%;
   height: 18px;
   width: 18px;
+  @media screen and (min-width: 1280px) {
+    height: 26px;
+    width: 26px;
+  }
 }
