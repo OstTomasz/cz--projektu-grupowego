@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+p {
+  margin: 0;
+}
+.container {
+  padding: 0 20px;
+  margin: 0;
+}
+.header {
+  background-color: yellow;
+  position: relative;
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-bottom: 1px solid black;
+  }
+  &__icecream-pic {
+    background-image: url("../assets/icecream-mini.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 419px;
+    z-index: -1;
+  }
+  &__title {
+    position: absolute;
+    top: 193px;
+    color: green;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    &--secondary {
+      display: block;
+      color: blue;
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: 0em;
+    }
+  }
+}
