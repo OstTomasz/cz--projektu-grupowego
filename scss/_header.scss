@@ -2,32 +2,74 @@ body {
   margin: 0;
   padding: 0;
 }
+button {
+  padding: 0;
+  cursor: pointer;
+}
 h1,
 p {
   margin: 0;
 }
-.container {
-  padding: 0 20px;
+ul {
+  display: flex;
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+.header-wrapper {
+  background-color: violet;
+  background-image: url("../assets/icecream-mini.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  @media screen and (min-width: 768px) {
+    background-image: none;
+  }
 }
 .header {
-  background-color: yellow;
   position: relative;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 160px;
+
+  @media screen and (min-width: 768px) {
+    background-image: url("../assets/icecream-mid.png");
+    background-position: right 137px bottom;
+    background-repeat: no-repeat;
+    max-width: 768px;
+    padding-bottom: 28px;
+  }
+  @media screen and (min-width: 1280px) {
+    background-position: right 267px bottom;
+    max-width: 1280px;
+  }
+
   &__navbar {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 60px;
+    width: 100%;
     border-bottom: 1px solid black;
+    margin-bottom: 92px;
+    @media screen and (min-width: 768px) {
+      height: 90px;
+      margin-bottom: 15px;
+    }
   }
+
   &__content {
-    background-image: url("../assets/icecream-mini.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 419px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
   &__title {
     color: green;
@@ -42,4 +84,109 @@ p {
       letter-spacing: 0em;
     }
   }
+  &__milk {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 19px;
+    }
+    &--pic {
+      display: inline-block;
+      width: 124px;
+      height: 126px;
+      background-image: url("../assets/milk.png");
+    }
+    &--txt {
+      display: inline-block;
+      color: brown;
+      font-size: 8px;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0em;
+      max-width: 114px;
+    }
+    & .arrow-button {
+      display: block;
+      margin-top: 7px;
+      margin-bottom: 6px;
+    }
+  }
+  &__places {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+    &--type {
+      position: relative;
+      z-index: 1;
+    }
+    &--dot {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: white;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &--quant {
+      color: red;
+      font-size: 28px;
+      line-height: 32.06px;
+    }
+    &--name {
+      color: white;
+      font-size: 8px;
+      line-height: 10.42px;
+    }
+  }
+  &__tasty {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 34px;
+      width: 168px;
+      height: 133px;
+      background-image: url("../assets/lady.png");
+    }
+  }
+}
+.buttons {
+  gap: 8px;
+  margin-top: 20px;
+}
+.button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 20px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &--primary {
+    color: gold;
+    background-color: blue;
+    &:hover,
+    &:focus {
+      background-color: lightblue;
+    }
+  }
+  &--secondary {
+    color: red;
+    background-color: grey;
+    &:hover,
+    &:focus {
+      background-color: darkgray;
+    }
+  }
+}
+.arrow-button {
+  font-size: 6px;
+  border: 0;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
 }
